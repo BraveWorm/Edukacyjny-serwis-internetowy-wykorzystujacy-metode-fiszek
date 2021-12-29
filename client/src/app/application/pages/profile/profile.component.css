@@ -1,0 +1,93 @@
+.bigTitle {
+  font-size: 29px;
+  font-family: 'Readex Pro', sans-serif;
+  font-weight: bold;
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+* {
+  box-sizing: border-box;
+}
+.page {
+  background-color: rgb(192, 214, 235);
+  height: calc(100vh - 104px);
+  font-weight: 200;
+  /* display: flex;
+  justify-content: space-between; */
+  width: 100%;
+  padding: 0px 100px;
+}
+.container {
+  background-color: rgba(238, 238, 238, 0.514);
+  height: calc(100vh - 104px);
+  padding-left: 140px;
+  padding-top: 30px;
+  padding-right: 50px;
+  padding-bottom: 140px;
+  width: 100%;
+}
+.table {
+  width: 70px;
+}
+.table2 {
+  width: 400px;
+}
+.title {
+  font-size: 22px;
+  width: 15px;
+  font-family: 'Readex Pro', sans-serif;
+}
+.title2 {
+  font-size: 20px;
+  width: 5px;
+  font-family: 'Readex Pro', sans-serif;
+}
+td {
+  height: 50px;
+}
+/* tr {
+  width: 100px;
+} */
+nav {
+  width: 90%;
+  height: 15%;
+  padding: 20px;
+  background: #f7c59f;
+  padding-top: 20px;
+  border-radius: 20px;
+}
+.section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.right-side {
+  padding-left: 20px;
+  padding-top: 20px;
+  width: 90%;
+  background-color: #f1f1f1;
+  height: 410px;
+  border-radius: 20px;
+}
+.divChart {
+  display:block;
+  width: 330px;
+  height: 330px;
+  color: #000;
+  float: right;
+  margin-right: 100px;
+  padding-bottom: 30px;
+}
+.tabel {
+float: left;
+}
+
+.btn-edit {
+  background-color: transparent;
+  color:black;
+  float:right;
+  font-size: 15px;
+  font-family: 'Readex Pro', sans-serif;
+  margin-left: 50px;
+  width: 30px;
+}

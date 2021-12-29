@@ -1,0 +1,8 @@
+.footer{
+    background-color: #577388;
+    padding: 20px;
+    margin: 0;
+    position: relative;
+    flex: 1 1 auto;
+    bottom: 0;
+}

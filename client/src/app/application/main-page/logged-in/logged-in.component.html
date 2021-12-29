@@ -1,0 +1,52 @@
+<div class="logged-in-page">
+    <div class="container">
+        <div class="welcome">
+            <p class="welcome-text">Witaj zalogowany uzytkowniku</p>
+            <button class="add-set" mat-raised-button routerLink="/create-set">+ Dodaj nowy zestaw</button>
+        </div>
+        <div class="list">
+
+            <!-- <div *ngIf="tmp; else text"> -->
+        <div *ngIf="mySets.length === 0">
+          <div class="textForNoSets">
+          <p class="text1">Brak zestawów</p>
+          <p class="text2">Zacznij od stworzenia nowego zestawu</p> 
+          </div>
+        </div>
+        <div *ngIf="mySets.length > 0">
+     <h1>Powrót do nauki:</h1>
+            <div class="set-preview" *ngFor="let set of mySets">
+      
+                <table style="width:100%">
+                    <tr>
+                        <td>
+                            <p class="set-title">{{set.setTitle}}</p>
+                        </td>
+                        <td>
+                            <p class="number">Liczba fiszek w zestawie: {{set.length}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="set-description">{{set.setDescription}}</p>
+                        </td>
+                        <td>
+                            <div class="buttons">
+                                <button class="study-btn" mat-raised-button [routerLink]="['/game',set.id]"
+                                    [state]="{data:set}">Ucz się</button>
+                                <button class="remove-set-btn" (click)="onDelete(set.id)" mat-raised-button>
+                                    <fa-icon class="icon fa-2x" [icon]="filmIcon">
+                                    </fa-icon>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            </div>
+            <!-- <ng-template #text>
+                BRAK
+            </ng-template> -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,201 @@
+.welcome-text {
+  color: black;
+  padding: 20px 40px;
+  font-size: 35px;
+}
+
+.game-page {
+  background-color: rgb(192, 214, 235);
+  padding: 0px 100px;
+  height: calc(100vh - 104px);
+  font-weight: 200;
+}
+
+.container {
+  background-color: rgba(238, 238, 238, 0.514);
+  height: calc(100vh - 104px);
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-right: 20px;
+}
+
+.welcome {
+  background-color: rgba(69, 69, 70, 0.342);
+  border-radius: 30px;
+  margin-top: 30px;
+}
+h1 {
+  padding: 15px;
+}
+.list {
+  background-color: #f7c59f;
+  margin-top: 30px;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-radius: 5px;
+  height: 570px;
+}
+
+.statistics {
+  float: left;
+  width: 20%;
+}
+
+.game {
+    float: left;
+    width: 80%;
+}
+
+.all-cards {
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+    margin-top: 30px;
+    border-radius: 5px;
+    background-color: rgba(148, 221, 255, 0.87);
+      /* background-image: linear-gradient(to right, rgba(148, 221, 255, 0.795), #f7c59f); */
+}
+
+.study-cards {
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+    margin-top: 30px;
+    border-radius: 5px;
+    background-color: rgba(255, 165, 162, 0.815);
+          /* background-image: linear-gradient(to right,rgba(255, 165, 162, 0.719), #f7c59f); */
+}
+
+.good-cards {
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;    
+    margin-top: 30px;
+    border-radius: 5px;
+    background-color: rgba(173, 252, 162, 0.726);
+              /* background-image: linear-gradient(to right,rgba(172, 252, 162, 0.678), #f7c59f); */
+}
+
+.game-section {
+  background-color: rgba(69, 69, 70, 0.13);
+  border-radius: 30px;
+  margin: 30px;
+  height: 450px;
+}
+.game-section2 {
+  background-color: rgba(69, 69, 70, 0.13);
+  border-radius: 30px;
+  margin: 30px;
+  height: 320px;
+  padding: 70px;
+}
+.show-card {
+ background-color: white;
+ margin: auto;
+ font-size: 20px;
+ color: black;
+ width: 80%;
+ height: 150px;
+ border-radius: 10px;
+ border-style: outset;
+ border-color: rgb(104, 105, 109);
+}
+
+.card-front-text {
+    padding: 10px;
+    text-align-last: center;
+   
+}
+
+h2 {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#card-definition {
+  display: block;
+  width: 77.5%;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 10px;
+  border-style: outset;
+  border-color: rgb(104, 105, 109);
+  outline: 0.5px solid rgb(104, 105, 109);
+  font-size: 18px;
+  padding: 10px;
+}
+.card-front {
+  font-size: 20px;
+  border-color: white;
+  border: none;
+  width: 80%;
+  height: 50%;
+  resize: none;
+  text-align-last: center;
+  padding-top: 50px;
+}
+#card-definition:focus {
+  outline: 0.5px solid #2e2a24;
+}
+
+.check-btn {
+  background-color: rgba(121, 212, 121, 0.671);
+  border-radius: 30px;
+  margin: 20px;
+  color: white;
+  padding: 3px;
+  width: 160px;
+  float: right;
+}
+
+.hint-btn {
+  background-color: rgba(69, 176, 238, 0.678);
+  border-radius: 30px;
+  margin: 20px;
+  color: white;
+  padding: 3px;
+  width: 140px;
+  float: left;
+}
+
+.reset-btn {
+  background-color: rgba(255, 252, 97, 0.815);
+  border-radius: 30px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  color: black;
+  padding: 3px;
+  width: 110px;
+  float: left;
+}
+.success {
+  background-color: rgba(172, 252, 162, 0.781);
+  margin: 5px;
+  padding: 5px;
+  border-radius: 15px;
+  height: 300px;
+  border: 2px solid;
+  border-color: rgb(102, 102, 102);
+}
+
+.grats {
+  margin:10px;
+  padding: 10px;
+  font-size: 22px;
+}
+.grats2 {
+  margin:10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.finish-text {
+  margin:10px;
+  padding: 10px;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.icon {
+  size: 110px;
+}

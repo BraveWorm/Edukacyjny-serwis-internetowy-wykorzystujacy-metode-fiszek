@@ -1,0 +1,50 @@
+<div class="page">
+     <form [formGroup]="dataForm" >
+         <div class="container">
+            <div class="list">
+                <div>
+                <p class="welcome-text">Stwórz nowy zestaw:</p>
+            </div>
+            <table style="width:80%">
+                <tr>
+                    <td>
+                        <div class="title">
+                            <h1>Nazwa zestawu:</h1>
+                        </div>
+                    </td>
+                    <td><input type="text" id="name" formControlName="setTitle"/></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="title">
+                            <h1>Opis zestawu:</h1>
+                        </div>
+                    </td>
+                    <td><input type="text" id="description" formControlName="setDescription"/></td>
+                </tr>
+            </table>
+            <table style="width:80%" formArrayName="Flashcards">
+            <div *ngFor="let item of Flashcards.controls; let i = index" [formGroupName]="i">
+                    <tr>
+                        <td>
+                            <div class="card">
+                                <h1>{{i+1}}</h1>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="text" class="card-front" placeholder="Pojęcie" formControlName="front"/>
+                        </td>
+                        <td>
+                            <input type="text" class="card-front" placeholder="Definicja" formControlName="back"/>
+                        </td>
+                        <button class="remove-btn" mat-raised-button (click)="removeCard(i)"><fa-icon class="icon fa-2x fa" [icon]="trashIcon">
+                                    </fa-icon></button>
+                    </div>
+                </table>
+     
+            <button class="add-card" mat-raised-button (click)="addNewCart()"> + Dodaj nową fiszkę</button>
+            <button class="save" mat-raised-button (click)="uploadMySet()">Zapisz zestaw</button>
+        </div>
+    </div> 
+  </form>
+</div>

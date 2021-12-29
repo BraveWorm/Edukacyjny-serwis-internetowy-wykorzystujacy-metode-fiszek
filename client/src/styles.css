@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.green-snackbar {
+    background: rgba(203, 255, 222, 0.781);
+    color: black;
+    font-size: 30px;;
+    width: 120px;
+    height: 50px;
+    margin: 50px;
+}
+.custom-dialog-container .mat-dialog-container {
+    background-color: rgba(218, 98, 98, 0.918);
+    width: 500px;
+    border-color: black;
+    border-width: 1px;
+}
