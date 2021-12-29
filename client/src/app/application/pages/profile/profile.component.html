@@ -1,0 +1,54 @@
+<div class="page">
+  <div class="container">
+    <section>
+      <nav>
+        <div class="bigTitle">Twój profil: <button class="btn-edit" routerLink='/edit-profile' mat-button>
+            <fa-icon class="icon fa-3x" [icon]="Icon">
+            </fa-icon>
+          </button></div>
+        <div *ngFor="let info of myInfo">
+          <table style="width: 40%">
+            <tr>
+              <td class="title">Imię:</td>
+              <td class="title2">{{ info.name }}</td>
+            </tr>
+            <tr>
+              <td class="title">Opis:</td>
+              <td class="title2">{{ info.description }}</td>
+            </tr>
+            <tr>
+              <td class="title">E-mail:</td>
+              <td class="title2">{{ setInfo }}</td>
+            </tr>
+          </table>
+        </div>
+      </nav>
+      <div class="right-side">
+        <div class="bigTitle">Twoje statystyki:</div>
+        <div class="tabel" *ngFor="let stat of myStats">
+          <table class="table2">
+            <tr>
+              <td class="title">Liczba wszystkich zestawów:</td>
+              <td class="title2">{{stat.howManySets}}</td>
+            </tr>
+            <tr>
+              <td class="title">Liczba wszystkich fiszek:</td>
+              <td class="title2">{{stat.allFlashcards}}</td>
+            </tr>
+            <tr>
+              <td class="title">Liczba nauczonych fiszek:</td>
+              <td class="title2">{{stat.learned}}</td>
+            </tr>
+            <tr>
+              <td class="title">Liczba fiszek w trakcie nauki:</td>
+              <td class="title2">{{stat.unlearned}}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="divChart">
+          <canvas id="canvas">{{chart}}</canvas>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

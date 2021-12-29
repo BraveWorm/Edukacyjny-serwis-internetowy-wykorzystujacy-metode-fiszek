@@ -1,0 +1,82 @@
+#site-register {
+  background-color: rgb(192, 214, 235);
+    height: calc(100vh - 104px);
+    font-weight:200;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#panel {
+  width: 400px; 
+  height: 510px;
+  margin: 90px auto;
+  padding: 20px 50px 10px;
+  background: rgba(255, 255, 255, 0.774);
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 15px;
+  letter-spacing: -1px;
+}
+
+form {
+margin: 0;
+}
+
+label {
+display: block;
+width: 260px;
+padding: 10px 5px;
+color: #696969;
+font-size: 15px;
+text-shadow: 0 0 1px silver;
+}
+
+#email, #password1, #password2 {
+display: block;
+width: 380px; 
+margin: 0 auto;
+margin-bottom: 10px;
+padding: 10px 5px;
+border: 1px solid silver;
+outline: 5px solid #ebebeb;
+font-size: 22px;
+}
+
+#email:focus, #password1:focus, #password2:focus {
+outline: 5px solid #e5f2f8;
+}
+
+#lower {
+  width: 360px;
+  padding: 3px;
+  margin-top: 15px;
+}
+
+.check {
+display: inline;
+float: none;
+font-size: 11px;
+padding: 5px;
+}
+
+.primary {
+width: 110%;
+height: 45px;
+color: white;
+background: #ff6b35c0;
+left: 160px;
+border-radius: 5px; 
+}
+
+#panel {
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
+}
+
+.log {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 28px;
+}

@@ -1,0 +1,54 @@
+<div id="site-register">
+    <div id="panel">
+        <div class="log">Rejestracja</div>
+        <form class="example-form" [formGroup]="formRegister" (submit)="check()">
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" name="email" formControlName="email"/>
+            <div *ngIf="formRegister.get('email')?.errors && formRegister.get('email')?.dirty">
+                <div *ngIf="formRegister.get('email')?.hasError('required')">
+                    <span style="color: red">Wprowadź email.</span>
+                </div>
+                <div *ngIf="formRegister.get('email')?.hasError('minlength')">
+                    <span style="color: red">Email powinien mieć przynajmiej 5 znaków.</span>
+                </div>
+                <div *ngIf="formRegister.get('email')?.hasError('maxlength')">
+                    <span style="color: red">Email nie moze mieć więcej niz 80 znaków.</span>
+                </div>
+                <div *ngIf="formRegister.get('email')?.hasError('pattern')">
+                    <span style="color: red">Email nie zgadza się ze wzorem.</span>
+                </div>
+            </div>
+            <div formGroupName="passwordGroup">
+                <label for="password">Hasło:</label>
+            <input type="password" id="password1" name="password" formControlName="password"/>
+            <div *ngIf="this.password1?.errors && this.password1?.dirty">
+                <div *ngIf="this.password1?.hasError('required')">
+                    <span style="color: red">Wprowadź hasło.</span>
+                </div>
+                <div *ngIf="this.password1?.hasError('minlength')">
+                    <span style="color: red">Hasło musi składać się z minimum 5 znaków.</span>
+                </div>
+                <div *ngIf="this.password1?.hasError('maxlength')">
+                    <span style="color: red">Hasło nie moze składać się z więcej niz 15 znaków.</span>
+                </div>
+            </div>
+                <label for="password2">Powtórz hasło:</label>
+                <input type="password" id="password2" name="password" formControlName="password2"/>
+                <div *ngIf="this.password2?.errors && this.password2?.errors">
+                    <div *ngIf="this.password2?.hasError('required') && this.password2?.dirty">
+                        <span style="color: red">Wprowadź hasło.</span>
+                    </div>
+                    <div *ngIf="this.password2?.hasError('minlength')">
+                        <span style="color: red">Hasło musi skladać się z minimum 5 znaków.</span>
+                    </div>
+                    <div *ngIf="this.password2?.hasError('maxlength')">
+                        <span style="color: red">Hasło nie moze skladać się z więcej niz 15 znaków.</span>
+                    </div>
+                </div>
+            </div>          
+        </form>
+        <div id="lower">
+            <button class="primary" (click)="check()" type="submit" [disabled]="!formRegister.valid">Zarejestruj</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="game-page">
+    <div class="container">
+        <div class="welcome">
+            <p class="welcome-text">Nauka zestawu: {{setInfo.setTitle}}</p>
+        </div>
+        <div class="list">
+            <div class="statistics" *ngFor="let stats of myStats">
+                <h1>Statystyki:</h1>
+                <p class="all-cards">Wszystkie fiszki: {{stats.allFlashcards}}</p>
+
+                <p class="study-cards">W trakcie nauki: {{stats.unlearned}}</p>
+
+                <p class="good-cards">Nauczone fiszki: {{stats.learned}}</p>
+            </div>
+            <div class="game">
+                <h1>Gra:</h1>
+                <div *ngIf="tmp; else games">  
+                    <div class="game-section2" >
+                    <div class="success">
+                    <p class="finish-text">Ukończono naukę!</p>
+                    <p class="grats">Gratulacje, zestaw został opanowany w 100%!</p>
+                    <p class="grats2">Czy chcesz zresetować postęp zestawu, aby go ponownie powtórzyć?</p>
+                    <button class="reset-btn" (click)="getReset()" mat-raised-button>
+                    Resetuj
+                    </button>
+                </div>
+            </div>
+        </div>
+                <ng-template #games>
+                    <div class="game-section" [formGroup]="dataForm">
+                        <h2>Pojęcie:</h2>
+                        <div class="show-card">
+                            <div class="card-front-text">
+                                <textarea class="card-front" cols="15" rows="3" formControlName='front' readonly></textarea>
+                            </div>
+                        </div>
+                        <h2>Definicja:</h2>
+                        <input autocomplete="off" type="text" formControlName="back" id="card-definition"
+                            placeholder="Wprowadź definicję..." />
+
+                        <button class="check-btn" mat-raised-button (click)="checkValidity()">
+                            Sprawdź poprawność
+                        </button>
+                        <button class="hint-btn" (click)="openSnackBar()" mat-raised-button>Podpowiedź</button></div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

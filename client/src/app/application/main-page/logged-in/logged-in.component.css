@@ -1,0 +1,112 @@
+* {
+  font-family: 'Readex Pro', sans-serif;
+}
+.welcome-text {
+  color: black;
+  padding: 20px 40px;
+  font-size: 35px;
+}
+
+.logged-in-page {
+  background-color: rgb(192, 214, 235);
+  padding: 0px 100px;
+  height: calc(100vh - 104px);
+  font-weight: 200;
+}
+
+.container {
+  background-color: rgba(238, 238, 238, 0.514);
+  height: calc(100vh - 104px);
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-right: 20px;
+}
+
+.welcome {
+  background-color: rgba(69, 69, 70, 0.342);
+  border-radius: 30px;
+  margin-top: 30px;
+}
+
+h1 {
+  padding: 15px;
+}
+.list {
+  background-color: #f7c59f;
+  margin-top: 65px;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-radius: 5px;
+  height: 535px;
+  overflow-y: scroll;
+}
+.add-set {
+  float: right;
+  color: white;
+  background-color: green;
+  padding: 3px 10px;
+  border-radius: 30px;
+}
+.set-preview {
+  background-color: white;
+  height: 100px;
+  margin: 10px;
+  border-radius: 10px;
+  border-color:rgba(66, 66, 66, 0.678);
+  border-width: 0.75px;
+  border-style: solid;
+}
+.set-title {
+  font-size: 25px;
+  float: left;
+  margin: 10px;
+  color: black;
+}
+
+.set-description {
+  font-size: 15px;
+  color: black;
+  margin: 10px;
+  float: left;
+}
+
+.number{
+  color:rgb(90, 90, 90);
+  float: right;
+  font-size: 18px;
+  margin: 10px;
+}
+.buttons {
+  float: right;
+}
+.study-btn {
+  background-color: rgba(69, 176, 238, 0.678);
+  border-radius: 30px;
+  margin: 3px;
+  color: white;
+  padding: 3px;
+  width: 130px;
+}
+
+.remove-set-btn {
+  background-color: rgba(253, 130, 108, 0.904);
+  border-radius: 30px;
+  width: 70px;
+  margin: 3px;
+  color: white;
+  padding: 3px;
+}
+
+.textForNoSets {
+  margin: 10%;
+  padding: 20px;
+  padding-top: 85px;
+  font-family: 'Readex Pro', sans-serif;
+  text-align: center;
+}
+.text1 {
+  font-size: 30px;
+}
+.text2 {
+  font-size: 23px;
+}

@@ -1,0 +1,62 @@
+<div class="page">
+    <div class="container">
+        <div class=right-side>
+            <form [formGroup]="dataForm">
+                <div class="bigTitle">Edytuj profil:</div>
+                <table class="table" style="width:110%">
+                    <tr>
+                        <td class="title">Edytuj imię:</td>
+                        <td><input type="text" id="name" name="name" formControlName="name"
+                                placeholder="Wpisz nowe imię..." /></td>
+                        <td><button class="save-name" (click)="setName()" routerLink='/profile'
+                                mat-raised-button>Zapisz</button></td>
+                    </tr>
+                    <tr>
+                        <td class="title">Edytuj opis:</td>
+                        <td><textarea type="text" cols="20" formControlName="description" rows="3" id="desc" name="desc"
+                                placeholder="Wpisz nowy opis..."></textarea></td>
+                        <td><button class="save-desc" (click)="setDesc()" routerLink='/profile'
+                                mat-raised-button>Zapisz</button></td>
+                    </tr>
+                </table>
+            </form>
+            <div class="bigTitle2">Zmień hasło:</div>
+            <form [formGroup]="form" (submit)="changePass()">
+                <table class="table" style="width:110%">
+                    <tr>
+                        <td class="title">Stare hasło:</td>
+                        <td>
+                            <input type="text" id="oldPass" name="oldPass" formControlName="oldPass"
+                                placeholder="Wpisz stare hasło..." />
+                            <div *ngIf="form.get('oldPass')?.errors && form.get('oldPass')?.errors">
+                                <div *ngIf="form.get('oldPass')?.hasError('required') && form.get('oldPass')?.dirty">
+                                    <span style="color: red">Wprowadź stare hasło.</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="title">Nowe hasło:</td>
+                        <td>
+                            <input type="text" id="newPass" formControlName="newPass"
+                                placeholder="Wpisz nowe hasło..." />
+                            <div *ngIf="form.get('newPass')?.errors && form.get('newPass')?.errors">
+                                <div *ngIf="form.get('newPass')?.hasError('required') && form.get('newPass')?.dirty">
+                                    <span style="color: red">Wprowadź nowe hasło.</span>
+                                </div>
+                                <div *ngIf="form.get('newPass')?.hasError('minlength')">
+                                    <span style="color: red">Nowe hasło musi składać sie z minimum 5 znaków.</span>
+                                </div>
+                                <div *ngIf="form.get('newPass')?.hasError('maxlength')">
+                                    <span style="color: red">Nowe hasło nie moze skladac sie z więcej niz 15
+                                        znakow.</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td><button class="save-passw" type="submit" [disabled]="!form.valid" mat-raised-button>Zapisz</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>

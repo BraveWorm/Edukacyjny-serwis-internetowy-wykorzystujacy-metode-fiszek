@@ -1,0 +1,35 @@
+<div id="site-login">
+  <div id="panel">
+    <div class="log">Logowanie</div>
+    <form class="example-form" [formGroup]="form" (submit)="submitForm()">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" formControlName="email" />
+      <div *ngIf="form.get('email')?.errors && form.get('email')?.dirty">
+        <div *ngIf="form.get('email')?.hasError('required')">
+          <span style="color: red">Wprowadź email.</span>
+        </div>
+        <div *ngIf="form.get('email')?.hasError('minlength')">
+          <span style="color: red">Email powinien mieć przynajmiej 5 znaków.</span>
+        </div>
+        <div *ngIf="form.get('email')?.hasError('maxlength')">
+          <span style="color: red">Email nie moze mieć więcej niz 80 znaków.</span>
+        </div>
+        <div *ngIf="form.get('email')?.hasError('pattern')">
+          <span style="color: red">Email nie zgadza się ze wzorem.</span>
+        </div>
+      </div>
+      <label for="password">Hasło:</label>
+      <input type="password" id="password" name="password" formControlName="password" />
+      <div *ngIf="form.get('password')?.errors && form.get('password')?.dirty">
+        <div *ngIf="form.get('password')?.hasError('required')">
+          <span style="color: red">Wprowadz hasło.</span>
+        </div>
+      </div>
+      <div id="lower">
+        <button class="primary" type="submit" [disabled]="!form.valid">
+          Zaloguj
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

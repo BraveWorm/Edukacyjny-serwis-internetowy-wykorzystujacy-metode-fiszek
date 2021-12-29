@@ -1,0 +1,111 @@
+.welcome-text {
+    color: black;
+    padding: 20px 40px;
+    font-size: 35px;
+}
+
+.page {
+  background-color: rgb(192, 214, 235);
+  padding: 0px 100px;
+  height: calc(100vh - 104px);
+  font-weight: 200;
+}
+
+.container {
+  background-color: rgba(238, 238, 238, 0.514);
+  height: calc(100vh - 104px);
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-right: 20px;
+}
+
+.card {
+    padding: 30px;
+    margin-right: 5px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.title {
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.table {
+  width: 80%;
+} 
+td {
+  height: 50px;
+}
+tr {
+  width: 100px;
+}
+#name,
+#description {
+  display: block;
+  width: 600px;
+  height: 40px;
+  margin: 0 auto;
+  border: 1px solid silver;
+  outline: 5px solid #ebebeb;
+  font-size: 18px;
+}
+
+#name:focus,
+#description:focus {
+  outline: 5px solid #2e2a24;
+}
+
+.card-front,
+.card-back {
+  display: block;
+  width: 400px;
+  height: 80px;
+  padding: 20px;
+  margin: 10px auto;
+  margin-left: 20px;
+  border: 1px solid silver;
+  outline: 5px solid #ebebeb;
+  font-size: 18px;
+}
+
+.card-front:focus,
+.card-back:focus {
+  outline: 5px solid #2e2a24;
+}
+.list {
+  background-color: #F7C59F;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 8px;
+  margin-right: 10px;
+  border-radius: 5px;
+  width: 97%;
+  height: 680px;
+  overflow-y: scroll;
+}
+
+.add-card {
+  margin: 10px;
+  padding-left: 30px;;
+  float: left;
+  color: white;
+  background-color: rgba(121, 212, 121, 0.671);
+  padding: 10px 24px;
+  border-radius: 30px;
+}
+.save {
+  margin: 10px;
+  float: right;
+  color: white;
+  background-color: rgba(69, 176, 238, 0.678);
+  padding: 10px 24px;
+  border-radius: 30px;
+}
+.remove-btn {
+  background-color: rgba(253, 130, 108, 0.904);
+  border-radius: 30px;
+  margin: 10px;
+  padding: 3px;
+  color: white;
+}

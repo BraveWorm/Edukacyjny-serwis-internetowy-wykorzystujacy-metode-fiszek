@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+.bigTitle {
+  font-size: 25px;
+  font-family: 'Readex Pro', sans-serif;
+  font-weight: bold;
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+.bigTitle2 {
+  font-size: 22px;
+  font-family: 'Readex Pro', sans-serif;
+  font-weight: bold;
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+.page {
+  background-color: rgb(192, 214, 235);
+  height: calc(100vh - 104px);
+  font-weight: 200;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 100px;
+}
+.container {
+  background-color: rgba(238, 238, 238, 0.514);
+  height: calc(100vh - 104px);
+  padding-left: 20px;
+  padding-top: 50px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+.table {
+  width: 110%;
+  padding: 5px;
+}
+.title {
+  font-size: 18px;
+  width: 150px;
+}
+.right-side {
+  width: 70%;
+  margin: 50px 200px;
+  background-color: #f1f1f1;
+  height: 500px;
+  padding: 50px;
+  border-radius: 20px;
+}
+.hoverable {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  height: 300px;
+  width: 300px;
+  border: 5px solid #000;
+  border-radius: 50%;
+}
+.hoverable .hover-text {
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.hoverable .background {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 1;
+}
+.hoverable:hover .hover-text {
+  display: block;
+}
+.hoverable:hover .background {
+  display: block;
+}
+#fileInput {
+  display: none;
+}
+#name,
+#desc,
+#oldPass,
+#newPass {
+  display: block;
+  width: 380px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border: 1px solid silver;
+  outline: 5px solid #ebebeb;
+  padding-left: 10px;
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 15px;
+  resize: none;
+}
+
+#name:focus,
+#desc:focus,
+#oldPass:focus,
+#newPass:focus {
+  outline: 5px solid #e5f2f8;
+  font-family: 'Readex Pro', sans-serif;
+   font-size: 15px;
+}
+
+.save-name, 
+.save-desc,
+.save-passw {
+  background-color: rgba(121, 212, 121, 0.671);
+  border-radius: 30px;
+  color: white;
+  padding: 3px;
+  width: 100px;
+  margin-right: 180px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+

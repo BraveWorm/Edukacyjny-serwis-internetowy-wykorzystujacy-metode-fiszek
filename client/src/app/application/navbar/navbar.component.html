@@ -1,0 +1,25 @@
+<mat-toolbar class="navbar">
+  <span class="logo" routerLink="/home">FISZKI</span>
+  <span class="example-spacer"></span>
+  <div *ngIf="this.authService.isUserLoggedIn.value;else notLogged">
+    <div class="dropdown">
+      <button mat-raised-button routerLink="/logged-in" class="drop-btn">Moje zestawy</button>
+      <div class="dropdown-content">
+        <a><button class="dropbtn" mat-raised-button routerLink="/create-set">Stwórz zestaw</button></a>
+      </div>
+    </div>
+    <div class="dropdown2">
+      <button mat-raised-button class="drop-btn2">Mój profil</button>
+      <div class="dropdown-content2">
+        <a> <button class="dropbtn2" mat-button routerLink="/profile">Zobacz profil</button></a>
+        <a> <button class="dropbtn2" mat-button routerLink="/edit-profile">Edytuj profil</button></a>
+        <a> <button class="dropbtn2" mat-button routerLink="/home" (click)="showToastr()"
+            (click)="this.authService.logout()">Wyloguj</button> </a>
+      </div>
+    </div>
+  </div>
+</mat-toolbar>
+<ng-template #notLogged>
+  <button class="login-btn" mat-raised-button routerLink="/login">Zaloguj się</button>
+  <button class="register-btn" mat-raised-button routerLink="/register">Zarejestruj się</button>
+</ng-template>
